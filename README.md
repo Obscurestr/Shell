@@ -20,4 +20,27 @@ Clone the repository and compile:
 git clone https://github.com/Obscurestr/Shell.git
 cd Shell
 gcc -Wall -Wextra -o shell Source.cpp
+```
+## Usage
+Run the shell executable:
+```bash
+./shell
+```
+Example commands:
+```bash
+ls -l
+cat file.txt | grep "keyword"
+sort < unsorted.txt > sorted.txt
+echo "Append me" >> log.txt
+sleep 10 &
+pwd
+cd /path/to/dir
+exit
+```
+## Code Structure
+- Tokenization: Splits user input into tokens.
+- Parsing: Builds command pipelines.
+- Execution: Handles forking, piping, and redirection.
+- Builtins: Executes simple commands internally.
+- Signal handling: Properly manages interrupts and child process cleanup.
  
